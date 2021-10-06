@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  {% load static %}
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
@@ -14,8 +15,9 @@
     />
 
     <title>Himachal Hotels</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
   </head>
-  <body style="background-image:linear-gradient(to left, #ADF6EB , #DE78FF);">
+  <body style="background-color:  #FFFFFF;">
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -43,55 +45,18 @@
                 More
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Help</a></li>
-                <li><a class="dropdown-item" href="#">Contact us</a></li>
+                <li><a class="dropdown-item" href="/Contactus">Contact us</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">About us</a></li>
+                <li><a class="dropdown-item" href="/Aboutus">About us</a></li>
               </ul>
             </li>
           </ul>
           <!------------------------------------------------------------------------------------------->
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  LOG IN
-                </button>
+                <a class="btn btn-primary" href="user/login" role="button">Login</a>
                 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">LOGIN</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        <form class="px-4 py-3">
-                          <div class="mb-3">
-                            <label for="exampleDropdownFormEmail1" class="form-label">Phone number / Username</label>
-                            <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="">
-                          </div>
-                          <div class="mb-3">
-                            <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
-                          </div>
-                          <div class="mb-3">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                              <label class="form-check-label" for="dropdownCheck">
-                                Remember me
-                              </label>
-                            </div>
-                          </div>
-                          <button type="submit" class="btn btn-primary">Login</button>
-                        </form>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="user/Signup">New around here? Sign up</a>
-                        <a class="dropdown-item" href="user/ForgotPassword">Forgot password?</a>
-                      </div>
-                      
-                    </div>
-                  </div>
-                </div>
+               
 
  <!--------------------------------------------------------------------------------------------------------------->         
           <!-- <div class="dropdown" style="margin: 10px;">
@@ -149,18 +114,29 @@
       content: "";
       clear: both;
       display: table;
-    }
-  </div>
+    -->
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="hotel 1.jpeg" class="d-block w-100" alt="Hotel 1 image"style="height: 500px;">
+          <img src="{% static 'images/hotel 1.jpeg' %}" class="d-block w-100" alt="Hotel 1 image"style="height: 500px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>PMR Hotel</h5>
+            <p>Beautiful hotel</p>
+        </div>
         </div>
         <div class="carousel-item">
-          <img src="hotel 2.jpeg" class="d-block w-100" alt="Hotel 2 image"style="height: 500px;">
+          <img src="{% static 'images/hotel 2.jpeg' %}" class="d-block w-100" alt="Hotel 2 image"style="height: 500px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Sahil Hotel</h5>
+            <p>Beautiful hotel</p>
+        </div>
         </div>
         <div class="carousel-item">
-          <img src="hotel 3.jpeg" class="d-block w-100" alt="Hotel 3 image" style="height: 500px;">
+          <img src="{% static 'images/hotel 3.jpeg' %}" class="d-block w-100" alt="Hotel 3 image" style="height: 500px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Desi Hotel</h5>
+            <p>Beautiful hotel</p>
+        </div>
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -172,20 +148,23 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+    <hr>
     <!---------------------------------------------------------------------------------------------------------------->
-    <!-- Yah hum apne hotel lgaege -->
-
+    <!-- Hotel starts from here -->
+    <div class="hotel d-flex justify-content-around">
+    {% for data in hoteldata %}
     <div class="card">
-      {% for data in hoteldata %}
-        <img class="card-img-top" src="{{data.img}}" alt="Card image cap">
+      
+        <img class="card-img-top" src="/media/{{data.img}}" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">{{data.name}}</h5>
           <p class="card-text">{{data.desc}}</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
         </div>
-        {% endfor %}
+       
       </div>
-
+      {% endfor %}
+    </div>
 
 
     <script

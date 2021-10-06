@@ -14,3 +14,7 @@ def aboutus(request):
 
 def contactus(request):
     return render(request, 'contact us/contact us.html')
+
+def Hotels(request):
+    return render(request, 'HotelList/HotelList.html')
+
