@@ -28,9 +28,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Hotel',
     'User',
-    'Bill',
     'Bookings',
     'Rooms',
+    'Rooms.Booking_functions'
 ]
 
 MIDDLEWARE = [

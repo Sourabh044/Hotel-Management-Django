@@ -17,10 +17,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     <link rel="stylesheet" href="{% static 'css/MainPage.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"">
     <title>Una Hotels</title>
   </head>
   <body>
-    <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0 fixed-top"> <a href="" class="navbar-brand">Una Hotel</a> <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks"> <span class="navbar-toggler-icon"></span> </button>
+    <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0 fixed-top"><a href="" class="navbar-brand">Una Hotel</a> <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks"> <span class="navbar-toggler-icon"></span> </button>
         <div class="collapse navbar-collapse " id="navLinks">
             <ul class="navbar-nav">
                 <li class="nav-item"> <a href=" " class="nav-link">HOME</a > </li>
@@ -34,13 +35,16 @@
       <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="2000">
-            <img src="{% static 'images/hotel 1.jpeg' %}" class="d-block w-100" alt="...">
+            <img src="{% static 'images/1.jpg' %}" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item" data-bs-interval="2000">
-            <img src="{% static 'images/hotel 2.jpeg' %}" class="d-block w-100" alt="...">
+            <img src="{% static 'images/2.jpg' %}" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item" data-bs-interval="2000">
-            <img src="{% static 'images/hotel 3.jpeg' %}" class="d-block w-100" alt="...">
+            <img src="{% static 'images/3.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="{% static 'images/4.jpg' %}" class="d-block w-100" alt="...">
           </div>
           
         </div>
@@ -54,8 +58,11 @@
         </button>
       </div>
     </header>
-    <hr>
-   
+   <div class="d-flex justify-content-around" style="height: 100px; width: 720px ; margin-top: 30px; margin-left: 30px;">
+   <div style="background-color: lightgrey;"> <img src="{% static '/images/LOGO.PNG' %}">
+    <div style="border: SOLID 3px;"><p>HELLO THERE</p></div>
+  </div>
+  </div>
 <!------------------------------------------------------->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
 

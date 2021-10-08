@@ -1,7 +1,8 @@
 .wrapper {
     height: 100vh;
     background: #000;
-    /* background: url("contact\ back.jpeg"); */
+    overflow: hidden;
+    background: url("{% static '/images/hello.jpeg'}");
     background-size: cover;
     width: 100%
 }

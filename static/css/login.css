@@ -2,21 +2,21 @@ body {
     color: #000;
     overflow-x: hidden;
     height: 100%;
-    background-image: linear-gradient(to right, #D500F9, #FFD54F);
+    background-color: rgb(8, 1, 1);
     background-repeat: no-repeat
 }
 
 input,
 textarea {
-    background-color: #F3E5F5;
+    background-color: #070008;
     border-radius: 50px !important;
     padding: 12px 15px 12px 15px !important;
     width: 100%;
     box-sizing: border-box;
     border: none !important;
-    border: 1px solid #F3E5F5 !important;
+    border: 1px solid #8e898f !important;
     font-size: 16px !important;
-    color: #000 !important;
+    color: rgb(12, 1, 1) !important;
     font-weight: 400
 }
 
@@ -25,7 +25,8 @@ textarea:focus {
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
-    border: 1px solid #D500F9 !important;
+    border: 1px solid #070008 !important;
+     background-color: rgb(12, 1, 1); 
     outline-width: 0;
     font-weight: 400
 }
@@ -49,12 +50,13 @@ button:focus {
 
 .card2 {
     width: 50%;
-    background-image: linear-gradient(to right, #FFD54F, #D500F9)
+    background-image: linear-gradient(to right, lightslategray, #212529) 
+    
 }
 
 #logo {
-    width: 70px;
-    height: 60px
+    width: 500px;
+
 }
 
 .heading {
@@ -62,7 +64,7 @@ button:focus {
 }
 
 ::placeholder {
-    color: #000 !important;
+    color: rgb(14, 1, 1) !important;
     opacity: 1
 }
 
@@ -86,8 +88,8 @@ button:focus {
 
 .btn-color {
     border-radius: 50px;
-    color: #fff;
-    background-image: linear-gradient(to right, #FFD54F, #D500F9);
+    color: rgb(8, 0, 0);
+     background-image: linear-gradient(to right, lightslategray, #140118); 
     padding: 15px;
     cursor: pointer;
     border: none !important;
@@ -95,22 +97,25 @@ button:focus {
 }
 
 .btn-color:hover {
-    color: #fff;
-    background-image: linear-gradient(to right, #D500F9, #FFD54F)
+    color: rgb(12, 1, 1);
+    background-image: linear-gradient(to right, lightslategray)
+    /* background-color:lightgrey; */
 }
 
 .btn-white {
     border-radius: 50px;
-    color: #D500F9;
-    background-color: #fff;
+    /* color: #D500F9;  */
+    background-color: #212529;
     padding: 8px 40px;
     cursor: pointer;
-    border: 2px solid #D500F9 !important
+    /* border: 2px solid #D500F9 !important */
+    background-color: rgb(0, 4, 5);
 }
 
 .btn-white:hover {
-    color: #fff;
-    background-image: linear-gradient(to right, #FFD54F, #D500F9)
+    color: rgb(15, 1, 1);
+    /* background-image: linear-gradient(to right, #FFD54F, #D500F9) */
+    background-color: rgb(0, 4, 7);
 }
 
 a {

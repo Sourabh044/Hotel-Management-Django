@@ -11,6 +11,5 @@ urlpatterns = [
     path('', include('Hotel.urls')),
     path('user/', include('User.urls')),
     path('Bookings/', include('Bookings.urls')),
-    path('Billing/', include('Bill.urls')),
     path('Room/', include('Rooms.urls')),
 ]

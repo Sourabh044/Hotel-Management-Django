@@ -11,7 +11,8 @@ class hotel(models.Model):
     Location = models.CharField(max_length=200, null=True)
     Location_Maps = models.CharField(max_length=246, null=True)
     FeeCancellation = models.BooleanField(null=True)
-    Total_Rooms = models.CharField(max_length=300, null=False)
+    Total_Rooms = models.CharField(max_length=300, null=False, default=100)
+    Ratings = models.FloatField(max_length=5, blank=True)
     # Rooms = {}
     # NonACRoom = models.BooleanField
     # CoupleRoom = models.BooleanField
