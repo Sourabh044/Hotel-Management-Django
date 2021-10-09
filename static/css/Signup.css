@@ -7,13 +7,11 @@
     background-image: linear-gradient(to left , #4ca1af, #c4e0e5 );
   } 
   .container {
-    position: absolute;
+
     max-width: 800px;
     height: 500px;
-    margin: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: 20px;
+   
   } 
   .myRightCtn {
     position: relative;
