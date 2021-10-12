@@ -43,7 +43,8 @@
   </head>
   <body>
  <!-- Navbar -->
-<nav class="navbar stick-top navbar-expand-lg bg-light navbar-light ">
+ <div class=>
+  <nav class="navbar stick-top navbar-expand-lg bg-light navbar-light ">
     <!-- Container wrapper -->
     <a class="navbar-brand mt-2 mt-lg-0" href="/">
         <img
@@ -69,14 +70,20 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
   
           <!-- Link -->
+          {% if user.is_authenticated %}
           <li class="nav-item">
-            <a class="nav-link" href="/user/login">Login</a>
+            <a class="nav-link" href="/user/logout/">Logout</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="/user/login/">Login</a>
+          </li>
+          {% endif %}
+          <li class="nav-item">
+            <a class="nav-link" href="/Hotels/">Hotels</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/Hotels">Hotels</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/Contactus">Contact us</a>
+            <a class="nav-link" href="/Contactus/">Contact us</a>
           </li>
   
           <!-- Dropdown -->
@@ -86,12 +93,15 @@
             </a>
             <!-- Dropdown menu -->
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              {% if user.is_authenticated %}
               <li>
-                <a class="dropdown-item" href="/Aboutus">About us</a>
+                <a class="dropdown-item" href="user/changepassword/">Change Password</a>
               </li>
-              <!-- <li>
-                <a class="dropdown-item" href="#">Another action</a>
-              </li> -->
+              {% endif %}
+              <li>
+                <a class="dropdown-item" href="/Aboutus/">About us</a>
+              </li>
+              
               <!-- <li>
                 <hr class="dropdown-divider" />
               </li>
@@ -106,9 +116,9 @@
         <!-- Icons -->
         <div class="d-flex align-items-center">
         <ul class="navbar-nav d-flex flex-row me-1">
-          <li class="nav-item me-3 me-lg-0">
+          <!-- <li class="nav-item me-3 me-lg-0">
             <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
-          </li>
+          </li> -->
           <li class="nav-item me-3 me-lg-0">
             <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
           </li>
@@ -118,6 +128,8 @@
     </div>
     <!-- Container wrapper -->
   </nav>
+ </div>
+
   <!-- Navbar -->
 <div class="w3-animate-opacity">
 {% block content %}
@@ -169,7 +181,7 @@
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <!-- Content -->
           <h6 class="text-uppercase fw-bold mb-4">
-            <i class="bi bi-building"></i>></i>Una Hotels
+            <i class="bi bi-building"></i> </i> Una Hotels
           </h6>
           <p>
             More info.
@@ -223,7 +235,7 @@
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
-            Contact
+            Contact Us
           </h6>
           <p><i class="fas fa-home me-3"></i> Govt. PG clg, Una</p>
           <p>

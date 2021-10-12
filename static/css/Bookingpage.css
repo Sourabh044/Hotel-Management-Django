@@ -1,7 +1,6 @@
-body {
+/* body {
     background-image: linear-gradient(to right, #7B1FA2, #E91E63)
-    
-}
+} */
 
 .section {
     position: relative;
@@ -28,7 +27,7 @@ body {
     margin: auto;
     padding: 40px;
     overflow: hidden;
-    background-image: url('hotel\ 2.jpeg');
+    background-image: url('Bookingpage.jpeg');
     background-size: cover;
     border-radius: 5px;
     z-index: 20

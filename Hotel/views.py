@@ -6,15 +6,15 @@ def welcome(request):
     return HttpResponse("<h1> Welcome User! <h1/>")
 
 def hotelviews(request):
-    allhotel = hotel.objects.all()
-    return render(request, 'MAIN.html', {'hoteldata':allhotel})
+    return render(request, 'MAIN.html')
 
 def aboutus(request):
-    return render(request, 'about us/about us page.html')
+    return render(request, 'about us page.html')
 
 def contactus(request):
-    return render(request, 'contact us/contact us.html')
+    return render(request, 'contact us.html')
 
 def Hotels(request):
-    return render(request, 'HotelList/HotelList.html')
+    allhotel = hotel.objects.all()
+    return render(request, 'HotelList.html', {'hoteldata':allhotel})
 

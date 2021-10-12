@@ -3,7 +3,7 @@ from django.db import models
 # Ask Sir that can we create a Dictionarry here
 class hotel(models.Model):
     id = models.AutoField(primary_key=True , editable=False)
-    name = models.CharField(max_length=20, null=False)
+    name = models.CharField(max_length=200, null=False)
     img = models.ImageField(upload_to="imagecontainer")
     desc = models.CharField(max_length=100, null=False)
     # updated = models.DateTimeField(auto_now=True)
